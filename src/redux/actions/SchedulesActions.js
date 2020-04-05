@@ -55,7 +55,7 @@ export const ReloadRequests=(id)=>{
 
 export const LoadSessionsToVerify=()=>{
     return(dispatch)=>{
-        Axios.get(`${API_URL}/schedules?_expand=trainer&_expand=user?status=finish&status=complete&status=cancelled`)
+        Axios.get(`${API_URL}/schedules?_expand=trainer&_expand=user&status=finish&status=complete&status=cancelled`)
         .then((res)=>{
             console.log(res.data)
             res.data.reverse()
