@@ -101,6 +101,7 @@ class ScheduleCards extends Component {
         }else{
             var sessionsList=this.props.sessions
         }
+        console.log(sessionsList)
 
         return sessionsList.map((val,index)=>{
             return (
@@ -149,6 +150,7 @@ class ScheduleCards extends Component {
                         </Card.Meta>
                         : null
                     }
+
                     {
                         this.props.User.role==='admin'&&val.user?
                         <Card.Meta style={{marginTop:'1em'}}>{
